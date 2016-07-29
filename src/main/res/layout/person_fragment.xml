@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingLeft="18dp"
+        android:text="请你认真填写，乱填或误填都将会影响借款申请！"/>
+    <ListView
+        android:id="@+id/listview"
+        android:background="@color/white"
+        android:layout_width="344dp"
+        android:layout_height="347dp"
+        android:paddingLeft="8dp"/>
+    <Button
+        android:layout_width="186.7dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/next"
+        android:layout_marginTop="26.3dp"
+        android:layout_marginLeft="18.7dp"
+        android:background="@color/green"
+        android:text="下一步"
+        android:textSize="18.7sp"
+        android:textColor="@color/white"/>
+</LinearLayout>
