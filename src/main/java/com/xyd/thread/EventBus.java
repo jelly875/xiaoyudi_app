@@ -1,5 +1,13 @@
 package com.xyd.thread;
 
+import android.os.Handler;
+import android.os.Handler.Callback;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Message;
+import android.util.Log;
+import android.util.SparseArray;
+
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Method;
 import java.util.Queue;
@@ -10,18 +18,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import android.os.Handler;
-import android.os.Handler.Callback;
-import android.os.HandlerThread;
-import android.os.Looper;
-import android.os.Message;
-import android.util.Log;
-import android.util.SparseArray;
-
-import com.cxl.zhongcai.thread.Pools.Factory;
-import com.cxl.zhongcai.thread.Pools.Pool;
-import com.cxl.zhongcai.thread.Pools.Recyclable;
 
 /**
  * Class EventBus
@@ -765,7 +761,7 @@ public final class EventBus {
     /**
      * Nested class PendingEvent
      */
-    private static final class PendingEvent implements Recyclable<PendingEvent>, Runnable {
+    private static final class PendingEvent implements Pools.Recyclable<PendingEvent>, Runnable {
         public Subscriber subscriber;
         public final Object[] params;
 
@@ -825,7 +821,7 @@ public final class EventBus {
             params = new Object[2];
         }
 
-        private static final Pool<PendingEvent> POOL = Pools.newPool(new Factory<PendingEvent>() {
+        private static final Pools.Pool<PendingEvent> POOL = Pools.newPool(new Pools.Factory<PendingEvent>() {
             @Override
             public PendingEvent newInstance() {
                 return new PendingEvent();
