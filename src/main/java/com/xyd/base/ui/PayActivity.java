@@ -24,11 +24,16 @@ public class PayActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pay_activity);
         TextView textView = (TextView)findViewById(R.id.txt_content);
+        textView.setText(initContent());
         callIntent = getIntent().getStringExtra("call");
         payReturnImage = (ImageView)findViewById(R.id.pay_return);
         payReturnImage.setOnClickListener(this);
         paySuccessButton = (Button) findViewById(R.id.pay_success);
         paySuccessButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "账单支付";
     }
 
     @Override

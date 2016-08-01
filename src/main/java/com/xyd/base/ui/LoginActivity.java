@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.xyd.R;
 import com.xyd.base.BaseActivity;
 
+/**
+ * Created by Administrator on 2016/7/21.
+ */
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     private ImageView loginImage;
@@ -24,24 +27,19 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         setContentView(R.layout.login_activity);
         callIntent = getIntent().getStringExtra("call");
         TextView textView = (TextView) findViewById(R.id.txt_content);
-        findViewById();
-        initView();
-
-    }
-
-
-    public void findViewById() {
+        textView.setText(initContent());
         loginImage = (ImageView)findViewById(R.id.login_return);
-        forgetPasswordImage = (TextView)findViewById(R.id.forget_password);
-        loginButton = (Button) findViewById(R.id.login_button1);
-        toRegisterText = (TextView) findViewById(R.id.to_register);
-    }
-
-    public void initView() {
         loginImage.setOnClickListener(this);
+        forgetPasswordImage = (TextView)findViewById(R.id.forget_password);
         forgetPasswordImage.setOnClickListener(this);
+        loginButton = (Button) findViewById(R.id.login_button1);
         loginButton.setOnClickListener(this);
+        toRegisterText = (TextView) findViewById(R.id.to_register);
         toRegisterText.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "登录";
     }
 
     @Override
@@ -60,6 +58,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     }
     @Override
     public void onClick(View v) {
+        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.login_return:
                 if(callIntent.equals("home")){
@@ -91,6 +90,4 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 break;
         }
     }
-
-
 }

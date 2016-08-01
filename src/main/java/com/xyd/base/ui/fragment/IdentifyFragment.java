@@ -19,13 +19,12 @@ import com.xyd.base.ui.PhotoIdentifyActivity;
  */
 public class IdentifyFragment extends BaseFragment implements View.OnClickListener{
 
-    private LinearLayout phoneIdentifyLayout;
-    private LinearLayout idcardIdentifyLayout;
-    private LinearLayout photoIdentifyLayout;
+    private LinearLayout phoneIdentifyLayout,idcardIdentifyLayout,photoIdentifyLayout;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.identify_fragment, null);
         TextView textView = (TextView) view.findViewById(R.id.txt_content);
+        textView.setText(initContent());
         phoneIdentifyLayout = (LinearLayout)view.findViewById(R.id.phone_identify);
         phoneIdentifyLayout.setOnClickListener(this);
         idcardIdentifyLayout = (LinearLayout)view.findViewById(R.id.idcard_identify);
@@ -37,6 +36,7 @@ public class IdentifyFragment extends BaseFragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.phone_identify:
                 Intent intent_phone_identify = new Intent();
@@ -57,5 +57,9 @@ public class IdentifyFragment extends BaseFragment implements View.OnClickListen
                 getActivity().overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
                 break;
         }
+    }
+    @Override
+    public String initContent() {
+        return "认证";
     }
 }

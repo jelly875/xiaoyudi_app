@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.xyd.R;
@@ -21,22 +19,20 @@ public class ApplyActivity extends BaseActivity implements View.OnClickListener{
 
     private ImageView applyReturnImage;
     private Button applyButton;
-    private String[] applyStr = new String[] {
-            "申请日期", "借款金额", "借款期限", "利息费用", "服务费用","到帐金额","取现卡号",
-            "还款总额","截止还款日期"
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.apply_activity);
         TextView textView = (TextView)findViewById(R.id.txt_content);
+        textView.setText(initContent());
         applyReturnImage = (ImageView)findViewById(R.id.apply_return);
         applyReturnImage.setOnClickListener(this);
         applyButton = (Button) findViewById(R.id.apply_submit);
         applyButton.setOnClickListener(this);
-        ListView infoList = (ListView)findViewById(R.id.listview);
-        infoList.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, applyStr));
+    }
+    @Override
+    public String initContent() {
+        return "提交申请";
     }
 
     @Override

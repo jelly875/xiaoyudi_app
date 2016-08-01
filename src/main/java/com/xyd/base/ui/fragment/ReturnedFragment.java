@@ -24,6 +24,9 @@ public class ReturnedFragment extends BaseFragment {
 
         return view;
     }
-
+    @Override
+    public String initContent() {
+        return "我要还款";
+    }
 
 }

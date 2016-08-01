@@ -14,64 +14,62 @@ import android.widget.TextView;
 
 import com.xyd.R;
 import com.xyd.base.BaseActivity;
-import com.xyd.base.ui.fragment.GiveMoneyFragment;
-import com.xyd.base.ui.fragment.ReviewFragment;
+import com.xyd.base.ui.fragment.BuyPasswordFragment;
+import com.xyd.base.ui.fragment.LoginPasswordFragment;
 
-/**
- * Created by Administrator on 2016/7/21.
- */
-public class BorrowRecordActivity extends BaseActivity implements View.OnClickListener{
+
+public class SecureInfoActivity extends BaseActivity implements View.OnClickListener{
 
 
     private ImageView returnButton;
 
     private FragmentManager fragmentManager;
     private RadioGroup radioGroup;
-    private RadioButton reviewRadio,giveMoneyRadio;
+    private RadioButton loginPasswordRadio,buyPasswordRadio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.borrow_record_activity);
+        setContentView(R.layout.secure_info_activity);
         fragmentManager = getSupportFragmentManager();
-        radioGroup = (RadioGroup) findViewById(R.id.borrow_record_tab);
-        reviewRadio =  (RadioButton) findViewById(R.id.review_radio);
-        giveMoneyRadio =  (RadioButton) findViewById(R.id.give_money_radio);
-        reviewRadio.setTextColor(getResources().getColor(R.color.green));
-        giveMoneyRadio.setTextColor(getResources().getColor(R.color.black));
+        radioGroup = (RadioGroup) findViewById(R.id.secure_tab);
+        loginPasswordRadio =  (RadioButton) findViewById(R.id.login_password_radio);
+        buyPasswordRadio =  (RadioButton) findViewById(R.id.buy_password_radio);
+        loginPasswordRadio.setTextColor(getResources().getColor(R.color.green));
+        buyPasswordRadio.setTextColor(getResources().getColor(R.color.black));
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        Fragment fragment = new ReviewFragment();
-        transaction.replace(R.id.return_content, fragment);
+        Fragment fragment = new LoginPasswordFragment();
+        transaction.replace(R.id.secure_content, fragment);
         transaction.commit();
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                if(checkedId ==reviewRadio.getId()){
-                    reviewRadio.setTextColor(getResources().getColor(R.color.green));
-                    giveMoneyRadio.setTextColor(getResources().getColor(R.color.black));
-                    Fragment fragment = new ReviewFragment();
-                    transaction.replace(R.id.return_content, fragment);
-                }else if(checkedId ==giveMoneyRadio.getId()){
-                    reviewRadio.setTextColor(getResources().getColor(R.color.black));
-                    giveMoneyRadio.setTextColor(getResources().getColor(R.color.green));
-                    Fragment fragment = new GiveMoneyFragment();
-                    transaction.replace(R.id.return_content, fragment);
+                if(checkedId ==loginPasswordRadio.getId()){
+                    loginPasswordRadio.setTextColor(getResources().getColor(R.color.green));
+                    buyPasswordRadio.setTextColor(getResources().getColor(R.color.black));
+                    Fragment fragment = new LoginPasswordFragment();
+                    transaction.replace(R.id.secure_content, fragment);
+                }else if(checkedId ==buyPasswordRadio.getId()){
+                    loginPasswordRadio.setTextColor(getResources().getColor(R.color.black));
+                    buyPasswordRadio.setTextColor(getResources().getColor(R.color.green));
+                    Fragment fragment = new BuyPasswordFragment();
+                    transaction.replace(R.id.secure_content, fragment);
                 }
                 transaction.commit();
             }
         });
         TextView textView = (TextView) findViewById(R.id.txt_content);
         textView.setText(initContent());
-        returnButton = (ImageView)findViewById(R.id.borrow_record_return);
+        returnButton = (ImageView)findViewById(R.id.secure_info_return);
         returnButton.setOnClickListener(this);
 
 
     }
     @Override
     public String initContent() {
-        return "借款记录";
+        return "修改安全密码";
     }
 
     @Override
@@ -79,7 +77,7 @@ public class BorrowRecordActivity extends BaseActivity implements View.OnClickLi
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 Intent intent_login = new Intent();
-                intent_login.setClass(BorrowRecordActivity.this,BorrowActivity.class);
+                intent_login.setClass(SecureInfoActivity.this,HomeActivity.class);
                 startActivity(intent_login);
                 overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
                 break;
@@ -90,12 +88,12 @@ public class BorrowRecordActivity extends BaseActivity implements View.OnClickLi
     public void onClick(View v) {
         // TODO Auto-generated method stub
         switch (v.getId()) {
-            case R.id.borrow_record_return:
+            case R.id.secure_info_return:
                 Intent intent_home = new Intent();
-                intent_home.setClass(BorrowRecordActivity.this,BorrowActivity.class);
+                intent_home.setClass(SecureInfoActivity.this,HomeActivity.class);
                 startActivity(intent_home);
                 overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
-                break;
+
         }
     }
 }

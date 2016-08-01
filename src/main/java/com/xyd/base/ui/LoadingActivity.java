@@ -3,11 +3,11 @@ package com.xyd.base.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 
 import com.xyd.R;
-import com.xyd.base.BaseActivity;
 
-public class LoadingActivity extends BaseActivity {
+public class LoadingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

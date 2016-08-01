@@ -23,10 +23,15 @@ public class PhotoMeIdentifyActivity extends BaseActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photome_identify_activity);
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         finishButton = (Button)findViewById(R.id.finish);
         finishButton.setOnClickListener(this);
         returnButton = (ImageView)findViewById(R.id.photome_identify_return);
         returnButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "持证认证";
     }
 
     @Override

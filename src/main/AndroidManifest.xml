@@ -2,34 +2,91 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xyd">
 
-    　
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".LoginActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask">
+            android:name=".base.ui.LoadingActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".FindPasswordActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask">
-        </activity>
+            android:name=".base.ui.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".PhotoIdentifyActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask">
-        </activity>
+            android:name=".base.ui.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".PhotoMeIdentifyActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask">
-        </activity>
+            android:name=".base.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.FindPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.SubmitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.PhoneIdentifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.IdcardIdentifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.PhotoIdentifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.PhotoMeIdentifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.InfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.BankcardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.BorrowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.ApplyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.ReturnMoneyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.PayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.BorrowRecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".base.ui.SecureInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
     </application>
+
+
 
 </manifest>

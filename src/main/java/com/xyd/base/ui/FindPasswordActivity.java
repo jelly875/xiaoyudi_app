@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.xyd.R;
 import com.xyd.base.BaseActivity;
 
+/**
+ * Created by Administrator on 2016/7/21.
+ */
 public class FindPasswordActivity extends BaseActivity implements View.OnClickListener{
 
     private ImageView findPasswordImage;
@@ -20,19 +23,15 @@ public class FindPasswordActivity extends BaseActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findpassword_activity);
         TextView textView = (TextView) findViewById(R.id.txt_content);
-        findViewById();
-        initView();
-    }
-
-
-    public void findViewById() {
+        textView.setText(initContent());
         findPasswordImage = (ImageView)findViewById(R.id.findpassword_return);
-        loginButton = (Button) findViewById(R.id.login_button2);
-    }
-
-    public void initView() {
         findPasswordImage.setOnClickListener(this);
+        loginButton = (Button) findViewById(R.id.login_button2);
         loginButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "找回密码";
     }
 
     @Override
@@ -67,6 +66,4 @@ public class FindPasswordActivity extends BaseActivity implements View.OnClickLi
                 break;
         }
     }
-
-
 }

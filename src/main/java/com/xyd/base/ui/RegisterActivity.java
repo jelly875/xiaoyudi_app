@@ -28,6 +28,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         setContentView(R.layout.register_activity);
         callIntent = getIntent().getStringExtra("call");
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         registerImage = (ImageView)findViewById(R.id.register_return);
         registerImage.setOnClickListener(this);
         inviteCodeItem = (LinearLayout)findViewById(R.id.invite_code);
@@ -35,6 +36,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         haveInviteCodeText.setOnClickListener(this);
         nextButton = (Button) findViewById(R.id.next);
         nextButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "注册";
     }
 
     @Override

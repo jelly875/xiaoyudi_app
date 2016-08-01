@@ -25,9 +25,14 @@ public class NotretureFragment extends BaseFragment implements View.OnClickListe
         payText.setOnClickListener(this);
         return view;
     }
+    @Override
+    public String initContent() {
+        return "我要还款";
+    }
 
     @Override
     public void onClick(View v) {
+        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.pay:
                 Intent intent_pay = new Intent();

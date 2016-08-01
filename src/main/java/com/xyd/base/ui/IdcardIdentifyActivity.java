@@ -49,19 +49,19 @@ public class IdcardIdentifyActivity extends BaseActivity implements View.OnClick
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                if (checkedId == personRadio.getId()) {
+                if(checkedId ==personRadio.getId()){
                     personRadio.setTextColor(getResources().getColor(R.color.green));
                     professionRadio.setTextColor(getResources().getColor(R.color.black));
                     relationshipRadio.setTextColor(getResources().getColor(R.color.black));
                     Fragment fragment = new PersonFragment();
                     transaction.replace(R.id.idcard_content, fragment);
-                } else if (checkedId == professionRadio.getId()) {
+                }else if(checkedId ==professionRadio.getId()){
                     personRadio.setTextColor(getResources().getColor(R.color.black));
                     professionRadio.setTextColor(getResources().getColor(R.color.green));
                     relationshipRadio.setTextColor(getResources().getColor(R.color.black));
                     Fragment fragment = new ProfessionFragment();
                     transaction.replace(R.id.idcard_content, fragment);
-                } else if (checkedId == relationshipRadio.getId()) {
+                }else if(checkedId ==relationshipRadio.getId()){
                     personRadio.setTextColor(getResources().getColor(R.color.black));
                     professionRadio.setTextColor(getResources().getColor(R.color.black));
                     relationshipRadio.setTextColor(getResources().getColor(R.color.green));
@@ -72,10 +72,15 @@ public class IdcardIdentifyActivity extends BaseActivity implements View.OnClick
             }
         });
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         returnButton = (ImageView)findViewById(R.id.idcard_identify_return);
         returnButton.setOnClickListener(this);
 
 
+    }
+    @Override
+    public String initContent() {
+        return "身份认证";
     }
 
     @Override

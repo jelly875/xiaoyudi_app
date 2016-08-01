@@ -9,33 +9,233 @@
         android:paddingTop="14dp"
         android:paddingLeft="18dp"
         android:text="请你认真填写，乱填或误填都将会影响借款申请！"/>
-    <ListView
-        android:id="@+id/listview1"
-        android:background="@color/white"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
         android:layout_width="344dp"
-        android:layout_height="161dp"
-        android:paddingLeft="8dp"/>
-    <ListView
-        android:id="@+id/listview2"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13.3dp"
         android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="亲属联系人1"
+            android:textColor="@color/green"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="344dp"
-        android:layout_height="161dp"
-        android:paddingLeft="8dp"/>
-    <ListView
-        android:id="@+id/listview3"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
         android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="姓名"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="344dp"
-        android:layout_height="161dp"
-        android:paddingLeft="8dp"/>
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="关系"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="电话"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13.3dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="亲属联系人2"
+            android:textColor="@color/green"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="姓名"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="关系"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="电话"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13.3dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="亲属联系人3"
+            android:textColor="@color/green"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="姓名"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="关系"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="电话"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
     <Button
         android:layout_width="186.7dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/submit"
         android:layout_marginTop="23.3dp"
-        android:layout_marginLeft="95.3dp"
+        android:layout_marginBottom="23.3dp"
         android:background="@color/red_nomal"
         android:text="提交确认"
         android:textSize="18.7sp"
         android:textColor="@color/white"/>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

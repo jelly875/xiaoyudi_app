@@ -23,10 +23,15 @@ public class PhotoIdentifyActivity extends BaseActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_identify_activity);
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         nextButton = (Button)findViewById(R.id.next);
         nextButton.setOnClickListener(this);
         returnButton = (ImageView)findViewById(R.id.photo_identify_return);
         returnButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "持证认证";
     }
 
     @Override

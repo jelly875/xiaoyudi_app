@@ -89,6 +89,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/borrow"
             android:background="@color/white"
             android:layout_weight="1">
             <ImageView
@@ -109,6 +110,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/return_money"
             android:background="@color/white"
             android:layout_marginLeft="2dp"
             android:layout_weight="1">
@@ -158,6 +160,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/secure"
             android:layout_marginLeft="2dp"
             android:background="@color/white"
             android:layout_weight="1">

@@ -9,12 +9,111 @@
         android:paddingTop="14dp"
         android:paddingLeft="18dp"
         android:text="请你认真填写，乱填或误填都将会影响借款申请！"/>
-    <ListView
-        android:id="@+id/listview"
-        android:background="@color/white"
+
+    <LinearLayout
         android:layout_width="344dp"
-        android:layout_height="347dp"
-        android:paddingLeft="8dp"/>
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13.3dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="公司名称"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="省份"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="138dp"
+            android:text="城市"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="单位地址"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="公司电话"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="职业"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.7dp"
+            android:layout_gravity="center"
+            android:text="薪资范围"
+            android:textSize="16sp"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

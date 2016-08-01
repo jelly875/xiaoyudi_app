@@ -21,10 +21,15 @@ public class BankcardActivity extends BaseActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bankcard_activity);
         TextView textView = (TextView)findViewById(R.id.txt_content);
+        textView.setText(initContent());
         bankcardReturnImage = (ImageView)findViewById(R.id.bankcard_return);
         bankcardReturnImage.setOnClickListener(this);
         plusImage = (ImageView)findViewById(R.id.plus);
         plusImage.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "银行卡";
     }
 
     @Override

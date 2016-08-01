@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@mipmap/title_bg">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secure_info_return"
+            android:layout_gravity="left"
+            android:src="@mipmap/return_back"/>
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="22.7sp"/>
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/secure_tab"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/login_password_radio"
+            style="@style/idcard_tab"
+            android:text="登录密码"/>
+
+        <RadioButton
+            android:id="@+id/buy_password_radio"
+            style="@style/idcard_tab"
+            android:text="交易密码"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/secure_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

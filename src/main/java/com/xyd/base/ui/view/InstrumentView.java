@@ -19,9 +19,6 @@ import android.widget.FrameLayout;
 
 import com.xyd.R;
 
-/**
- * Created by Administrator on 2016/7/22.
- */
 public class InstrumentView extends FrameLayout {
     private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// 渐变色环画笔
     private final int[] mColors = new int[]{

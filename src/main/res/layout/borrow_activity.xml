@@ -29,54 +29,81 @@
             android:layout_marginRight="19dp"/>
     </FrameLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26.7dp"
+        android:layout_marginTop="17dp"
+        android:text="可借额度 3300.00元"
+        android:textSize="16sp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56.7dp"
-        android:orientation="horizontal">
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="17dp"
+            android:layout_gravity="center"
             android:paddingLeft="26.7dp"
             android:text="借款金额"
             android:textSize="18sp"/>
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="18.7dp"
-            android:paddingLeft="13.3dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13.3dp"
             android:text="2000元"
             android:textSize="18sp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56.7dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="17dp"
+            android:layout_gravity="center"
             android:paddingLeft="26.7dp"
             android:text="借款期限"
             android:textSize="18sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="17dp"
+            android:id="@+id/time"
+            android:layout_gravity="center"
             android:paddingLeft="13.3dp"
-            android:text="30天"
+            android:text="1天"
             android:textSize="18sp"/>
     </LinearLayout>
 
-    <Button
-        android:layout_width="186.7dp"
-        android:layout_height="35.3dp"
-        android:layout_gravity="center"
-        android:text="计算一下"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:background="@color/blue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="26.7dp"
+            android:text="收款卡"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bank_select"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="中国建设银行"
+            android:textSize="18sp"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"

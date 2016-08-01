@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.xyd.R;
@@ -17,9 +15,6 @@ import com.xyd.base.BaseActivity;
  */
 public class InfoActivity extends BaseActivity implements View.OnClickListener{
 
-    private String[] infoStr = new String[] {
-            "姓名", "性别", "身份证号", "手机号码", "电子邮箱","单位地址","现家庭住址"
-    };
     private ImageView infoReturnImage;
 
     @Override
@@ -27,11 +22,13 @@ public class InfoActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_activity);
         TextView textView = (TextView)findViewById(R.id.txt_content);
-        ListView infoList = (ListView)findViewById(R.id.listview);
-        infoList.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, infoStr));
+        textView.setText(initContent());
         infoReturnImage = (ImageView)findViewById(R.id.info_return);
         infoReturnImage.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "个人资料";
     }
 
     @Override

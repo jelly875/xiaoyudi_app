@@ -48,12 +48,12 @@ public class ReturnMoneyActivity extends BaseActivity implements View.OnClickLis
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                if (checkedId == notReturnRadio.getId()) {
+                if(checkedId ==notReturnRadio.getId()){
                     notReturnRadio.setTextColor(getResources().getColor(R.color.green));
                     returnedRadio.setTextColor(getResources().getColor(R.color.black));
                     Fragment fragment = new NotretureFragment();
                     transaction.replace(R.id.return_content, fragment);
-                } else if (checkedId == returnedRadio.getId()) {
+                }else if(checkedId ==returnedRadio.getId()){
                     notReturnRadio.setTextColor(getResources().getColor(R.color.black));
                     returnedRadio.setTextColor(getResources().getColor(R.color.green));
                     Fragment fragment = new ReturnedFragment();
@@ -63,10 +63,15 @@ public class ReturnMoneyActivity extends BaseActivity implements View.OnClickLis
             }
         });
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         returnButton = (ImageView)findViewById(R.id.return_money_return);
         returnButton.setOnClickListener(this);
 
 
+    }
+    @Override
+    public String initContent() {
+        return "我要还款";
     }
 
     @Override

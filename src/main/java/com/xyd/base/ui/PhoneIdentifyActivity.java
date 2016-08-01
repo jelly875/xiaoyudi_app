@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.xyd.R;
 import com.xyd.base.BaseActivity;
 
+/**
+ * Created by Administrator on 2016/7/21.
+ */
 public class PhoneIdentifyActivity extends BaseActivity implements View.OnClickListener{
 
     private Button submitButton;
@@ -20,10 +23,15 @@ public class PhoneIdentifyActivity extends BaseActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.phone_identify_activity);
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         submitButton = (Button)findViewById(R.id.confirm_submit);
         submitButton.setOnClickListener(this);
         returnButton = (ImageView)findViewById(R.id.phone_identify_return);
         returnButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "手机认证";
     }
 
     @Override
@@ -51,6 +59,10 @@ public class PhoneIdentifyActivity extends BaseActivity implements View.OnClickL
             case R.id.confirm_submit:
                 submitButton.setBackgroundColor(getResources().getColor(R.color.red_press));
                 submitButton.setTextColor(getResources().getColor(R.color.white));
+                Intent intent_submit = new Intent();
+                intent_submit.setClass(PhoneIdentifyActivity.this,HomeActivity.class);
+                startActivity(intent_submit);
+                overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
                 break;
         }
     }

@@ -23,10 +23,15 @@ public class SubmitActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.submit_activity);
         TextView textView = (TextView) findViewById(R.id.txt_content);
+        textView.setText(initContent());
         submitReturnImage = (ImageView)findViewById(R.id.submit_return);
         submitReturnImage.setOnClickListener(this);
         submitButton = (Button)findViewById(R.id.submit);
         submitButton.setOnClickListener(this);
+    }
+    @Override
+    public String initContent() {
+        return "注册";
     }
 
     @Override
