@@ -4,7 +4,6 @@ import android.app.Application;
 
 
 public class BaseApplication extends Application {
-    private static String TAG = "BaseApplication";
     private static BaseApplication mInstance;
 
     public static BaseApplication getInstance() {
@@ -13,11 +12,7 @@ public class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
-        // TODO Auto-generated method stub
         super.onCreate();
         mInstance = this;
-
     }
-    
-    
 }
