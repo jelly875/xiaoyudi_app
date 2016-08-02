@@ -2,18 +2,22 @@ package com.xyd.base.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.xyd.AppEngine;
 import com.xyd.R;
 import com.xyd.base.BaseActivity;
+import com.xyd.http.HttpEngine;
+import com.xyd.http.HttpUrlBuilder;
+import com.xyd.http.request.GetVCodeRequest;
+import com.xyd.http.request.LoginRequest;
+import com.xyd.http.response.ResponseBean;
 
-/**
- * Created by Administrator on 2016/7/21.
- */
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     private ImageView loginImage;
@@ -58,7 +62,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.login_return:
                 if(callIntent.equals("home")){
@@ -75,6 +78,38 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
                 break;
             case R.id.login_button1:
+//                LoginRequest req = new LoginRequest();
+//                req.setPhone("18671134182");
+//                req.setLoginPassword("123456");
+//                AppEngine
+//                        .getInstance()
+//                        .getHttpEngine()
+//                        .httpPost(HttpUrlBuilder.ACTION_POST_LOGIN, req, new HttpEngine.HttpRspListener() {
+//                            @Override
+//                            public void onHttpRsp(int err, String message, ResponseBean rsp) {
+//                                Log.i("chan","《《《《《《《《《《《《《《《《《");
+//                                Log.i("chan",err+"");
+//                                Log.i("chan","《《《《《《《《《《《《《《《《《");
+//                            }
+//                        });
+                GetVCodeRequest req = new GetVCodeRequest();
+                req.setPhone("18671134182");
+                AppEngine.getInstance().getHttpEngine().httpPost(HttpUrlBuilder.ACTION_POST_GET_VCODE, req, new HttpEngine.HttpRspListener() {
+                    @Override
+                    public void onHttpRsp(int err, String message, ResponseBean rsp) {
+                        Log.i("chan","《《《《《《《《《《《《《《《《《");
+                        Log.i("chan",err+"");
+                        Log.i("chan","《《《《《《《《《《《《《《《《《");
+                    }
+                });
+                Log.i("chan", "test net work");
+
+
+
+
+
+
+
                 Intent intent_home = new Intent();
                 intent_home.setClass(LoginActivity.this,HomeActivity.class);
                 intent_home.putExtra("user","logined");

@@ -109,9 +109,6 @@ public class HttpEngine {
         void onHttpRsp(int err, String message, ResponseBean rsp);
     }
 
-    /**
-     * @author HUANGKAI
-     */
     private class PreHandler implements Callback {
         private WeakReference<HttpRspListener> mHandler;
         private Class<? extends Object> mRspClass;
